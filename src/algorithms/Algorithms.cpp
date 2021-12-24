@@ -12,4 +12,3 @@ struct Algorithms::CallbackEvent {
     int curr;
     std::vector<int> vecState;
 };
-

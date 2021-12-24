@@ -1,21 +1,20 @@
 //
-//  Algorithms.hpp
+//  HeapSort.hpp
 //  VisualSorting
 //
 //  Created by Adam Siekierski on 24/12/2021.
 //  Copyright © 2021 Adam Siekierski. All rights reserved.
 //
 
-#ifndef Algorithms_hpp
-#define Algorithms_hpp
+#ifndef HeapSort_hpp
+#define HeapSort_hpp
 
 #include <stdio.h>
-#include "BubbleSort.hpp"
-#include "HeapSort.hpp"
-
+#include <vector>
+#include <algorithm>
 
 namespace Algorithms {
-    struct CallbackEvent;
+    std::vector<int> heap_sort(std::vector<int> vec);
 }
 
-#endif /* Algorithms_hpp */
+#endif /* HeapSort_hpp */

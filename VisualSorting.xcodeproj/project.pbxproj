@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E241D277601AA002DA3A0 /* Algorithms.cpp */; };
+		737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E24202776826B002DA3A0 /* HeapSort.cpp */; };
 		73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73948AF92775C64600C889E4 /* ResourcePath.mm */; };
 		73948AFD2775C64600C889E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948AFC2775C64600C889E4 /* main.cpp */; };
 		73948B002775C64600C889E4 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73948AFF2775C64600C889E4 /* cute_image.jpg */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		737E241D277601AA002DA3A0 /* Algorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithms.cpp; sourceTree = "<group>"; };
 		737E241E277601AA002DA3A0 /* Algorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algorithms.hpp; sourceTree = "<group>"; };
+		737E24202776826B002DA3A0 /* HeapSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeapSort.cpp; sourceTree = "<group>"; };
+		737E24212776826B002DA3A0 /* HeapSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = "<group>"; };
 		73948AF42775C64600C889E4 /* VisualSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73948AF82775C64600C889E4 /* VisualSorting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualSorting-Info.plist"; sourceTree = "<group>"; };
 		73948AF92775C64600C889E4 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				73948B192775F0F400C889E4 /* BubbleSort.hpp */,
 				737E241D277601AA002DA3A0 /* Algorithms.cpp */,
 				737E241E277601AA002DA3A0 /* Algorithms.hpp */,
+				737E24202776826B002DA3A0 /* HeapSort.cpp */,
+				737E24212776826B002DA3A0 /* HeapSort.hpp */,
 			);
 			path = algorithms;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73948AFD2775C64600C889E4 /* main.cpp in Sources */,
+				737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */,
 				73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */,
 				73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */,
 				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,
