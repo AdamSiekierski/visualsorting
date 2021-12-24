@@ -10,6 +10,7 @@
 		737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E241D277601AA002DA3A0 /* Algorithms.cpp */; };
 		737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E24202776826B002DA3A0 /* HeapSort.cpp */; };
 		737E242527768607002DA3A0 /* InsertionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E242327768607002DA3A0 /* InsertionSort.cpp */; };
+		737E242827768823002DA3A0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E242627768823002DA3A0 /* QuickSort.cpp */; };
 		73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73948AF92775C64600C889E4 /* ResourcePath.mm */; };
 		73948AFD2775C64600C889E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948AFC2775C64600C889E4 /* main.cpp */; };
 		73948B002775C64600C889E4 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73948AFF2775C64600C889E4 /* cute_image.jpg */; };
@@ -27,6 +28,8 @@
 		737E24212776826B002DA3A0 /* HeapSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = "<group>"; };
 		737E242327768607002DA3A0 /* InsertionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InsertionSort.cpp; sourceTree = "<group>"; };
 		737E242427768607002DA3A0 /* InsertionSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InsertionSort.hpp; sourceTree = "<group>"; };
+		737E242627768823002DA3A0 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
+		737E242727768823002DA3A0 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		73948AF42775C64600C889E4 /* VisualSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73948AF82775C64600C889E4 /* VisualSorting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualSorting-Info.plist"; sourceTree = "<group>"; };
 		73948AF92775C64600C889E4 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				737E24212776826B002DA3A0 /* HeapSort.hpp */,
 				737E242327768607002DA3A0 /* InsertionSort.cpp */,
 				737E242427768607002DA3A0 /* InsertionSort.hpp */,
+				737E242627768823002DA3A0 /* QuickSort.cpp */,
+				737E242727768823002DA3A0 /* QuickSort.hpp */,
 			);
 			path = algorithms;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				737E242527768607002DA3A0 /* InsertionSort.cpp in Sources */,
 				73948AFD2775C64600C889E4 /* main.cpp in Sources */,
 				737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */,
+				737E242827768823002DA3A0 /* QuickSort.cpp in Sources */,
 				73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */,
 				73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */,
 				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,

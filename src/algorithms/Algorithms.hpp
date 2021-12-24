@@ -14,7 +14,7 @@
 #include "BubbleSort.hpp"
 #include "HeapSort.hpp"
 #include "InsertionSort.hpp"
-
+#include "QuickSort.hpp"
 
 namespace Algorithms {
     struct CallbackEvent;
