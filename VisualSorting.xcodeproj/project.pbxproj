@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E241D277601AA002DA3A0 /* Algorithms.cpp */; };
 		73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73948AF92775C64600C889E4 /* ResourcePath.mm */; };
 		73948AFD2775C64600C889E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948AFC2775C64600C889E4 /* main.cpp */; };
 		73948B002775C64600C889E4 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73948AFF2775C64600C889E4 /* cute_image.jpg */; };
 		73948B022775C64600C889E4 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 73948B012775C64600C889E4 /* nice_music.ogg */; };
 		73948B042775C64600C889E4 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73948B032775C64600C889E4 /* sansation.ttf */; };
 		73948B062775C64600C889E4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 73948B052775C64600C889E4 /* icon.png */; };
+		73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B182775F0F400C889E4 /* BubbleSort.cpp */; };
+		73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B1C2775F3B000C889E4 /* Utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		737E241D277601AA002DA3A0 /* Algorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithms.cpp; sourceTree = "<group>"; };
+		737E241E277601AA002DA3A0 /* Algorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algorithms.hpp; sourceTree = "<group>"; };
 		73948AF42775C64600C889E4 /* VisualSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73948AF82775C64600C889E4 /* VisualSorting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualSorting-Info.plist"; sourceTree = "<group>"; };
 		73948AF92775C64600C889E4 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -26,6 +31,11 @@
 		73948B032775C64600C889E4 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		73948B052775C64600C889E4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		73948B0E2775CEAD00C889E4 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		73948B0F2775D20500C889E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		73948B182775F0F400C889E4 /* BubbleSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BubbleSort.cpp; sourceTree = "<group>"; };
+		73948B192775F0F400C889E4 /* BubbleSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BubbleSort.hpp; sourceTree = "<group>"; };
+		73948B1C2775F3B000C889E4 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		73948B1D2775F3B000C889E4 /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				73948B0E2775CEAD00C889E4 /* readme.md */,
+				73948B0F2775D20500C889E4 /* .gitignore */,
 				73948AF82775C64600C889E4 /* VisualSorting-Info.plist */,
 				73948AF92775C64600C889E4 /* ResourcePath.mm */,
 				73948AFB2775C64600C889E4 /* ResourcePath.hpp */,
@@ -66,7 +77,7 @@
 				73948AFE2775C64600C889E4 /* resources */,
 			);
 			name = VisualSorting;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		73948AFE2775C64600C889E4 /* resources */ = {
 			isa = PBXGroup;
@@ -82,9 +93,31 @@
 		73948B0D2775CBA200C889E4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				73948B1B2775F39E00C889E4 /* utils */,
+				73948B102775D85E00C889E4 /* algorithms */,
 				73948AFC2775C64600C889E4 /* main.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		73948B102775D85E00C889E4 /* algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				73948B182775F0F400C889E4 /* BubbleSort.cpp */,
+				73948B192775F0F400C889E4 /* BubbleSort.hpp */,
+				737E241D277601AA002DA3A0 /* Algorithms.cpp */,
+				737E241E277601AA002DA3A0 /* Algorithms.hpp */,
+			);
+			path = algorithms;
+			sourceTree = "<group>";
+		};
+		73948B1B2775F39E00C889E4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				73948B1C2775F3B000C889E4 /* Utils.cpp */,
+				73948B1D2775F3B000C889E4 /* Utils.hpp */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73948AFD2775C64600C889E4 /* main.cpp in Sources */,
+				73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */,
 				73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */,
+				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,
+				73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VisualSorting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -292,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VisualSorting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
