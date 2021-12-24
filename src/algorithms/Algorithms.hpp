@@ -10,8 +10,10 @@
 #define Algorithms_hpp
 
 #include <stdio.h>
+
 #include "BubbleSort.hpp"
 #include "HeapSort.hpp"
+#include "InsertionSort.hpp"
 
 
 namespace Algorithms {

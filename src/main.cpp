@@ -24,7 +24,7 @@ int main(int, char const**)
 {
     std::vector<int> shuffled = Utils::random_vector(LENGTH, MIN, MAX);
     
-    std::vector<int> sorted = Algorithms::bubble_sort(shuffled);
+    std::vector<int> sorted = Algorithms::insertion_sort(shuffled);
     
     std::cout << Utils::print_vector(shuffled);
     std::cout << Utils::print_vector(sorted);
