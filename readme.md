@@ -1,4 +1,4 @@
-#  Kolorowo Upstrzone Testy Algorytmów Sortowania
+#  Kolorowo Urozmaicone Testy Algorytmów Sortowania
 
 ## Wykorzystane technologie
 
