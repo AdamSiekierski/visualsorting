@@ -6,7 +6,6 @@
 //  Copyright © 2021 Adam Siekierski. All rights reserved.
 //
 
-#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
 #include <iostream>
@@ -15,19 +14,21 @@
 
 #include "Algorithms.hpp"
 #include "Utils.hpp"
+#include "GUI.hpp"
 
 #define LENGTH 50
 #define MIN 1
 #define MAX 99
 
-int main(int, char const**)
-{
-    std::vector<int> shuffled = Utils::random_vector(LENGTH, MIN, MAX);
+int main(int, char const**) {
+    sf::RenderWindow window(sf::VideoMode(800, 600), "VisualSorting");
     
-    std::vector<int> sorted = Algorithms::quick_sort(shuffled);
+    window.setActive(false);
     
-    std::cout << Utils::print_vector(shuffled);
-    std::cout << Utils::print_vector(sorted);
-    
-    return 0;
+    sf::Thread thread(&GUI::rendering_thread, &window);
+    thread.launch();
+
+    GUI::event_loop(&window);
+
+    return EXIT_SUCCESS;
 }
