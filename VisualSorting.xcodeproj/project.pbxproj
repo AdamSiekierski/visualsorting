@@ -19,6 +19,7 @@
 		73948B042775C64600C889E4 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73948B032775C64600C889E4 /* sansation.ttf */; };
 		73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B182775F0F400C889E4 /* BubbleSort.cpp */; };
 		73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B1C2775F3B000C889E4 /* Utils.cpp */; };
+		73BB77222778DA410083724F /* AlgorithmSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73BB77202778DA410083724F /* AlgorithmSelect.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		73948B192775F0F400C889E4 /* BubbleSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BubbleSort.hpp; sourceTree = "<group>"; };
 		73948B1C2775F3B000C889E4 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		73948B1D2775F3B000C889E4 /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
+		73BB77202778DA410083724F /* AlgorithmSelect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AlgorithmSelect.cpp; sourceTree = "<group>"; };
+		73BB77212778DA410083724F /* AlgorithmSelect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AlgorithmSelect.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				733C132127776C4300FB3FFF /* RenderingThread.hpp */,
 				733C132327776DAA00FB3FFF /* EventLoop.cpp */,
 				733C132427776DAA00FB3FFF /* EventLoop.hpp */,
+				73BB77202778DA410083724F /* AlgorithmSelect.cpp */,
+				73BB77212778DA410083724F /* AlgorithmSelect.hpp */,
 			);
 			path = gui;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,
 				733C132227776C4300FB3FFF /* RenderingThread.cpp in Sources */,
 				73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */,
+				73BB77222778DA410083724F /* AlgorithmSelect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

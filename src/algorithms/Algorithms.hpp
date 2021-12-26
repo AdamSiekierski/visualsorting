@@ -18,6 +18,16 @@
 
 namespace Algorithms {
     struct CallbackEvent;
+
+    typedef enum : int {
+        BUBBLE,
+        HEAP,
+        INSERTION,
+        QUICK,
+        NONE,
+    } Algorithm;
+
+    std::vector<int> sort_with(Algorithms::Algorithm a, std::vector<int> vec);
 }
 
 #endif /* Algorithms_hpp */

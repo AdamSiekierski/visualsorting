@@ -21,14 +21,17 @@
 #define MAX 99
 
 int main(int, char const**) {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "VisualSorting");
-    
-    window.setActive(false);
-    
-    sf::Thread thread(&GUI::rendering_thread, &window);
-    thread.launch();
+    Algorithms::Algorithm alg = GUI::select_alogrithm();
 
-    GUI::event_loop(&window);
+    //    sf::RenderWindow window(sf::VideoMode(800, 600), "VisualSorting");
+    //
+    //    window.setActive(false);
+    //
+    //    sf::Thread thread(&GUI::rendering_thread, &window);
+    //    thread.launch();
+    //
+    //    GUI::event_loop(&window);
+        
 
     return EXIT_SUCCESS;
 }

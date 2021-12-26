@@ -15,11 +15,11 @@ void GUI::rendering_thread(sf::RenderWindow* window) {
     if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
         return EXIT_FAILURE;
     }
-    sf::Text text("kutas", font, 50);
-    text.setFillColor(sf::Color::White);
+    sf::Text text("test", font, 50);
+    text.setFillColor(sf::Color::Black);
 
     while (window->isOpen()) {
-        window->clear();
+        window->clear(sf::Color::White);
 
         window->draw(text);
         

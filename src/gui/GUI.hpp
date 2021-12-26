@@ -13,5 +13,6 @@
 
 #include "RenderingThread.hpp"
 #include "EventLoop.hpp"
+#include "AlgorithmSelect.hpp"
 
 #endif /* GUI_hpp */
