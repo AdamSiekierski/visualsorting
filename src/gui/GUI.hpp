@@ -14,5 +14,6 @@
 #include "RenderingThread.hpp"
 #include "EventLoop.hpp"
 #include "AlgorithmSelect.hpp"
+#include "RenderVectorLines.hpp"
 
 #endif /* GUI_hpp */

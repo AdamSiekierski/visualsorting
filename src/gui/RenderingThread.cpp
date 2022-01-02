@@ -8,21 +8,13 @@
 
 #include "RenderingThread.hpp"
 
-void GUI::rendering_thread(sf::RenderWindow* window) {
-    window->setActive(true);
+void GUI::rendering_thread(GUI::RenderingThreadParams p) {
+    sf::RenderWindow* window = p.window;
     
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("test", font, 50);
-    text.setFillColor(sf::Color::Black);
-
-    while (window->isOpen()) {
-        window->clear(sf::Color::White);
-
-        window->draw(text);
-        
-        window->display();
-    }
+    window->setActive(true);
+    window->clear(sf::Color::White);
+    
+    render_vector_lines(p.vec, window);
+    
+    window->display();
 }

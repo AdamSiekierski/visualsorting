@@ -13,9 +13,18 @@
 #include <SFML/Graphics.hpp>
 
 #include "ResourcePath.hpp"
+#include "GUI.hpp"
+#include "Utils.hpp"
+#include "Algorithms.hpp"
 
 namespace GUI {
-    void rendering_thread(sf::RenderWindow* window);
+    struct RenderingThreadParams {
+        sf::RenderWindow* window;
+        std::vector<int> vec;
+        Algorithms::Algorithm alg;
+    };
+
+    void rendering_thread(RenderingThreadParams p);
 }
 
 #endif /* RenderingThread_hpp */

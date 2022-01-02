@@ -16,22 +16,22 @@
 #include "Utils.hpp"
 #include "GUI.hpp"
 
-#define LENGTH 50
-#define MIN 1
-#define MAX 99
+#include "constants.hpp"
 
 int main(int, char const**) {
     Algorithms::Algorithm alg = GUI::select_alogrithm();
+    
+    std::vector<int> vec = Utils::random_vector(VECTOR_LEN, 1, WINDOW_H);
 
-    //    sf::RenderWindow window(sf::VideoMode(800, 600), "VisualSorting");
-    //
-    //    window.setActive(false);
-    //
-    //    sf::Thread thread(&GUI::rendering_thread, &window);
-    //    thread.launch();
-    //
-    //    GUI::event_loop(&window);
-        
+    sf::RenderWindow window(sf::VideoMode(WINDOW_W, WINDOW_H), "VisualSorting");
+
+    window.setActive(false);
+    
+    GUI::RenderingThreadParams p = { &window, vec, alg };
+    sf::Thread thread(&GUI::rendering_thread, p);
+    thread.launch();
+
+    GUI::event_loop(&window);
 
     return EXIT_SUCCESS;
 }
