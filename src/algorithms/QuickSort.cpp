@@ -9,37 +9,41 @@
 #include "QuickSort.hpp"
 
 namespace QuickSort {
-    int partition(std::vector<int> &vec, int start, int end){
+    int partition(std::vector<int> &vec, int start, int end, Algorithms::StepCallback step) {
         int pivot = end;
         int j = start;
         
         for (int i = start; i < end; ++i) {
             if (vec[i] < vec[pivot]) {
                 std::swap(vec[i], vec[j]);
-                
+
                 ++j;
             }
+            
+            step(&vec, i);
         }
 
         std::swap(vec[j], vec[pivot]);
+        
+        step(&vec, j);
 
         return j;
     }
 
-    void quick_sort_iter(std::vector<int> &vec, int start, int end) {
+    void quick_sort_iter(std::vector<int> &vec, int start, int end, Algorithms::StepCallback step) {
         if (start < end){
-            int part = partition(vec, start, end);
+            int part = partition(vec, start, end, step);
 
-            quick_sort_iter(vec, start, part - 1);
-            quick_sort_iter(vec, part + 1, end);
+            quick_sort_iter(vec, start, part - 1, step);
+            quick_sort_iter(vec, part + 1, end, step);
         }
         
         return vec;
     }
 }
 
-std::vector<int> Algorithms::quick_sort(std::vector<int> vec) {
-    QuickSort::quick_sort_iter(vec, 0, vec.size() - 1);
+std::vector<int> Algorithms::quick_sort(std::vector<int> vec, Algorithms::StepCallback step) {
+    QuickSort::quick_sort_iter(vec, 0, vec.size() - 1, step);
     
     return vec;
 }

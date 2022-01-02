@@ -12,9 +12,10 @@
 #include <stdio.h>
 #include <vector>
 #include <algorithm>
+#include "Algorithms.hpp"
 
 namespace Algorithms {
-    std::vector<int> insertion_sort(std::vector<int> vec);
+    std::vector<int> insertion_sort(std::vector<int> vec, std::function<void(std::vector<int>*, int)> step);
 }
 
 #endif /* InsertionSort_hpp */

@@ -11,9 +11,10 @@
 
 #include <stdio.h>
 #include <vector>
+#include "Algorithms.hpp"
 
 namespace Algorithms {
-    std::vector<int> bubble_sort(std::vector<int> vec);
+    std::vector<int> bubble_sort(std::vector<int> vec, std::function<void(std::vector<int>*, int)> step);
 }
 
 #endif /* BubbleSort_hpp */

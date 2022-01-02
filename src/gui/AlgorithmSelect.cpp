@@ -9,7 +9,7 @@
 #include "AlgorithmSelect.hpp"
 
 Algorithms::Algorithm GUI::select_alogrithm() {
-    std::cout << "VisualSorting\n\nAvailable algorithms:\n1. Bubble sort\n2. Heap sort\n3. Insertion sort\n4. Quickk sort\n\nPlease select algorithm (1-4): ";
+    std::cout << "VisualSorting\n\nAvailable algorithms:\n1. Bubble sort\n2. Heap sort\n3. Insertion sort\n4. Quick sort\n\nPlease select algorithm (1-4): ";
     
     int algorithm;
     std::cin >> algorithm;

@@ -12,9 +12,12 @@ void GUI::rendering_thread(GUI::RenderingThreadParams p) {
     sf::RenderWindow* window = p.window;
     
     window->setActive(true);
-    window->clear(sf::Color::White);
     
-    render_vector_lines(p.vec, window);
-    
-    window->display();
+    Algorithms::sort_with(p.alg, &p.vec, [&](std::vector<int>* vec, int curr) {
+        GUI::render_vector_lines(vec, window, curr);
+        
+        sf::sleep(sf::milliseconds(Algorithms::sleep_for_algorithm(p.alg)));
+        
+        window->display();
+    });
 }

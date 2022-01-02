@@ -8,22 +8,22 @@
 
 #include "RenderVectorLines.hpp"
 
-sf::RectangleShape create_line(int pos, int h, int w) {
+sf::RectangleShape create_line(int pos, int h, int w, bool isCurr) {
     sf::RectangleShape rect(sf::Vector2f(w, h));
     
     rect.move(pos * w, 0);
-    rect.setFillColor(sf::Color::Black);
+    rect.setFillColor(isCurr ? sf::Color::Red : sf::Color::Black);
     
     return rect;
 }
 
-void GUI::render_vector_lines(std::vector<int> vec, sf::RenderWindow* window) {
+void GUI::render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window, int curr) {
     window->clear(sf::Color::White);
     
     sf::Vector2<unsigned int> windowSize = window->getSize();
     
-    for (int i = 0; i < vec.size(); i++) {
-        sf::RectangleShape line = create_line(i, vec[i], windowSize.x / vec.size());
+    for (int i = 0; i < vec->size(); i++) {
+        sf::RectangleShape line = create_line(i, vec->at(i), windowSize.x / vec->size(), i == curr);
         window->draw(line);
     }
 }

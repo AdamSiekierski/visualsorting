@@ -8,22 +8,33 @@
 
 #include "Algorithms.hpp"
 
-struct Algorithms::CallbackEvent {
-    int curr;
-    std::vector<int> vecState;
-};
-
-std::vector<int> sort_with(Algorithms::Algorithm a, std::vector<int> vec) {
+std::vector<int> Algorithms::sort_with(Algorithms::Algorithm a, std::vector<int>* vec, std::function<void(std::vector<int>*, int)> step) {
+    
     switch (a) {
         case Algorithms::BUBBLE:
-            return Algorithms::bubble_sort(vec);
+            return Algorithms::bubble_sort(*vec, step);
         case Algorithms::HEAP:
-            return Algorithms::heap_sort(vec);
+            return Algorithms::heap_sort(*vec, step);
         case Algorithms::INSERTION:
-            return Algorithms::insertion_sort(vec);
+            return Algorithms::insertion_sort(*vec, step);
         case Algorithms::QUICK:
-            return Algorithms::quick_sort(vec);
+            return Algorithms::quick_sort(*vec, step);
         case Algorithms::NONE:
-            return vec;
+            return *vec;
+    }
+}
+
+int Algorithms::sleep_for_algorithm(Algorithms::Algorithm a) {
+    switch (a) {
+        case Algorithms::BUBBLE:
+            return 0;
+        case Algorithms::HEAP:
+            return 2;
+        case Algorithms::INSERTION:
+            return 2;
+        case Algorithms::QUICK:
+            return 4;
+        case Algorithms::NONE:
+            return 0;
     }
 }

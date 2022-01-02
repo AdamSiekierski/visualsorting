@@ -10,6 +10,8 @@
 #define Algorithms_hpp
 
 #include <stdio.h>
+#include <vector>
+#include "constants.hpp"
 
 #include "BubbleSort.hpp"
 #include "HeapSort.hpp"
@@ -17,8 +19,6 @@
 #include "QuickSort.hpp"
 
 namespace Algorithms {
-    struct CallbackEvent;
-
     typedef enum : int {
         BUBBLE,
         HEAP,
@@ -27,7 +27,11 @@ namespace Algorithms {
         NONE,
     } Algorithm;
 
-    std::vector<int> sort_with(Algorithms::Algorithm a, std::vector<int> vec);
+    typedef std::function<void(std::vector<int>*, int)> StepCallback;
+
+    std::vector<int> sort_with(Algorithms::Algorithm a, std::vector<int>* vec, Algorithms::StepCallback step);
+
+    int sleep_for_algorithm(Algorithms::Algorithm a);
 }
 
 #endif /* Algorithms_hpp */
