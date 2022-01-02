@@ -29,7 +29,7 @@ int Algorithms::sleep_for_algorithm(Algorithms::Algorithm a) {
         case Algorithms::BUBBLE:
             return 0;
         case Algorithms::HEAP:
-            return 2;
+            return 4;
         case Algorithms::INSERTION:
             return 2;
         case Algorithms::QUICK:

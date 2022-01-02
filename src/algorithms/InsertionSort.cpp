@@ -10,20 +10,20 @@
 
 std::vector<int> Algorithms::insertion_sort(std::vector<int> vec, Algorithms::StepCallback step) {
     for (int j = 1; j < vec.size(); j++) {
+        step(&vec, j);
+        
         int k = vec[j];
         int i = j - 1;
 
         while (i >= 0 && vec[i] > k) {
+            step(&vec, i);
+            
             vec[i + 1] = vec[i];
 
             i--;
-            
-            step(&vec, i);
         }
         
         vec[i + 1] = k;
-        
-        step(&vec, j);
     }
     
     return vec;

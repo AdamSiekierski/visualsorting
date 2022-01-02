@@ -13,13 +13,18 @@ namespace HeapSort {
         int largest;
         int l = (2 * i) + 1;
         int r = l + 1;
+        
+        step(&vec, r);
+        step(&vec, i);
 
         if (l < size && vec[l] > vec[i]) {
             largest = l;
         } else {
             largest = i;
         }
-
+        
+        step(&vec, largest);
+        
         if (r < size && vec[r] > vec[largest]) {
             largest = r;
         }
@@ -28,15 +33,11 @@ namespace HeapSort {
             std::swap(vec[i], vec[largest]);
             heap(vec, largest, size, step);
         }
-        
-        step(&vec, i);
     }
 
     void initial_heap(std::vector<int>& vec, Algorithms::StepCallback step) {
         for (int i = (vec.size() / 2); i >= 0; i--) {
             heap(vec, i, vec.size(), step);
-            
-            step(&vec, i);
         }
     }
 }
