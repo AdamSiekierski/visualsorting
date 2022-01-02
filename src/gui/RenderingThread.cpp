@@ -13,11 +13,32 @@ void GUI::rendering_thread(GUI::RenderingThreadParams p) {
     
     window->setActive(true);
     
-    Algorithms::sort_with(p.alg, &p.vec, [&](std::vector<int>* vec, int curr) {
+    sf::SoundBuffer beepBuffer;
+    sf::Sound beepSound;
+    
+    GUI::create_beep(&beepBuffer, &beepSound);
+    
+    std::vector<int> sorted = Algorithms::sort_with(p.alg, &p.vec, [&](std::vector<int>* vec, int curr) {
         GUI::render_vector_lines(vec, window, curr);
+        
+        beepSound.setPitch(GUI::get_beep_pitch((*vec)[curr]));
         
         sf::sleep(sf::milliseconds(Algorithms::sleep_for_algorithm(p.alg)));
         
         window->display();
     });
+    
+    for (int i = 0; i < sorted.size(); i++) {
+        GUI::render_vector_lines(&sorted, window, i);
+        
+        beepSound.setPitch(GUI::get_beep_pitch(sorted[i]));
+        
+        sf::sleep(sf::milliseconds(10));
+        
+        window->display();
+    }
+    
+    beepSound.stop();
+    
+    GUI::render_vector_lines(&sorted, window, sorted.size());
 }

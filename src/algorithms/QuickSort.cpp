@@ -14,8 +14,6 @@ namespace QuickSort {
         int j = start;
         
         for (int i = start; i < end; ++i) {
-            step(&vec, j);
-            step(&vec, pivot);
             step(&vec, i);
             
             if (vec[i] < vec[pivot]) {
@@ -23,9 +21,15 @@ namespace QuickSort {
 
                 ++j;
             }
+            
+            step(&vec, j);
         }
+        
+        step(&vec, j);
 
         std::swap(vec[j], vec[pivot]);
+        
+        step(&vec, pivot);
 
         return j;
     }

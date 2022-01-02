@@ -13,7 +13,7 @@
 #include <SFML/Graphics.hpp>
 
 namespace GUI {
-    void event_loop(sf::RenderWindow* window);
+    void event_loop(sf::RenderWindow* window, sf::Thread* thread);
 }
 
 #endif /* EventLoop_hpp */

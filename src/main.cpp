@@ -31,7 +31,7 @@ int main(int, char const**) {
     sf::Thread thread(&GUI::rendering_thread, p);
     thread.launch();
 
-    GUI::event_loop(&window);
+    GUI::event_loop(&window, &thread);
 
     return EXIT_SUCCESS;
 }

@@ -15,5 +15,6 @@
 #include "EventLoop.hpp"
 #include "AlgorithmSelect.hpp"
 #include "RenderVectorLines.hpp"
+#include "Beep.hpp"
 
 #endif /* GUI_hpp */

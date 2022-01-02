@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73235F10278238690021EEF4 /* Beep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73235F0E278238690021EEF4 /* Beep.cpp */; };
 		733C131F2777694E00FB3FFF /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C131D2777694E00FB3FFF /* GUI.cpp */; };
 		733C132227776C4300FB3FFF /* RenderingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C132027776C4300FB3FFF /* RenderingThread.cpp */; };
 		733C132527776DAA00FB3FFF /* EventLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C132327776DAA00FB3FFF /* EventLoop.cpp */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73235F0E278238690021EEF4 /* Beep.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Beep.cpp; sourceTree = "<group>"; };
+		73235F0F278238690021EEF4 /* Beep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Beep.hpp; sourceTree = "<group>"; };
 		7337B880278207A400DBACF0 /* constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
 		733C131D2777694E00FB3FFF /* GUI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GUI.cpp; sourceTree = "<group>"; };
 		733C131E2777694E00FB3FFF /* GUI.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GUI.hpp; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				73BB77212778DA410083724F /* AlgorithmSelect.hpp */,
 				73BB77232778E1150083724F /* RenderVectorLines.cpp */,
 				73BB77242778E1150083724F /* RenderVectorLines.hpp */,
+				73235F0E278238690021EEF4 /* Beep.cpp */,
+				73235F0F278238690021EEF4 /* Beep.hpp */,
 			);
 			path = gui;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */,
 				73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */,
 				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,
+				73235F10278238690021EEF4 /* Beep.cpp in Sources */,
 				73BB77252778E1150083724F /* RenderVectorLines.cpp in Sources */,
 				733C132227776C4300FB3FFF /* RenderingThread.cpp in Sources */,
 				73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */,

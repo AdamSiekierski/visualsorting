@@ -8,12 +8,13 @@
 
 #include "EventLoop.hpp"
 
-void GUI::event_loop(sf::RenderWindow* window) {
+void GUI::event_loop(sf::RenderWindow* window, sf::Thread* thread) {
     while (window->isOpen()) {
         sf::Event event;
         while (window->pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window->close();
+                thread->terminate();
             }
         }
     }
