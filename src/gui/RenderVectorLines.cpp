@@ -28,3 +28,14 @@ void GUI::render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window, i
     }
 }
 
+void GUI::render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window) {
+    window->clear(sf::Color::White);
+    
+    sf::Vector2<unsigned int> windowSize = window->getSize();
+    
+    for (int i = 0; i < vec->size(); i++) {
+        sf::RectangleShape line = create_line(i, vec->at(i), windowSize.x / vec->size(), false);
+        window->draw(line);
+    }
+}
+

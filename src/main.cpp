@@ -10,8 +10,6 @@
 #include <stdio.h>
 #include <iostream>
 
-#include "ResourcePath.hpp"
-
 #include "Algorithms.hpp"
 #include "Utils.hpp"
 #include "GUI.hpp"

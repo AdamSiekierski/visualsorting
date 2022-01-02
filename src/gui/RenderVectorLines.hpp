@@ -16,6 +16,7 @@
 
 namespace GUI {
     void render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window, int curr);
+    void render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window);
 }
 
 #endif /* RenderVectorLines_hpp */

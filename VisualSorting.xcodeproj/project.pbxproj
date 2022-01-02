@@ -15,9 +15,7 @@
 		737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E24202776826B002DA3A0 /* HeapSort.cpp */; };
 		737E242527768607002DA3A0 /* InsertionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E242327768607002DA3A0 /* InsertionSort.cpp */; };
 		737E242827768823002DA3A0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E242627768823002DA3A0 /* QuickSort.cpp */; };
-		73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73948AF92775C64600C889E4 /* ResourcePath.mm */; };
 		73948AFD2775C64600C889E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948AFC2775C64600C889E4 /* main.cpp */; };
-		73948B042775C64600C889E4 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73948B032775C64600C889E4 /* sansation.ttf */; };
 		73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B182775F0F400C889E4 /* BubbleSort.cpp */; };
 		73948B1E2775F3B000C889E4 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73948B1C2775F3B000C889E4 /* Utils.cpp */; };
 		73BB77222778DA410083724F /* AlgorithmSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73BB77202778DA410083724F /* AlgorithmSelect.cpp */; };
@@ -44,10 +42,7 @@
 		737E242727768823002DA3A0 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		73948AF42775C64600C889E4 /* VisualSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73948AF82775C64600C889E4 /* VisualSorting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualSorting-Info.plist"; sourceTree = "<group>"; };
-		73948AF92775C64600C889E4 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		73948AFB2775C64600C889E4 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		73948AFC2775C64600C889E4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		73948B032775C64600C889E4 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		73948B0E2775CEAD00C889E4 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		73948B0F2775D20500C889E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		73948B182775F0F400C889E4 /* BubbleSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BubbleSort.cpp; sourceTree = "<group>"; };
@@ -112,20 +107,9 @@
 				73948B0E2775CEAD00C889E4 /* readme.md */,
 				73948B0F2775D20500C889E4 /* .gitignore */,
 				73948AF82775C64600C889E4 /* VisualSorting-Info.plist */,
-				73948AF92775C64600C889E4 /* ResourcePath.mm */,
-				73948AFB2775C64600C889E4 /* ResourcePath.hpp */,
 				73948B0D2775CBA200C889E4 /* src */,
-				73948AFE2775C64600C889E4 /* resources */,
 			);
 			name = VisualSorting;
-			sourceTree = SOURCE_ROOT;
-		};
-		73948AFE2775C64600C889E4 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				73948B032775C64600C889E4 /* sansation.ttf */,
-			);
-			path = resources;
 			sourceTree = SOURCE_ROOT;
 		};
 		73948B0D2775CBA200C889E4 /* src */ = {
@@ -224,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73948B042775C64600C889E4 /* sansation.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +245,6 @@
 				733C131F2777694E00FB3FFF /* GUI.cpp in Sources */,
 				737E242827768823002DA3A0 /* QuickSort.cpp in Sources */,
 				73948B1A2775F0F400C889E4 /* BubbleSort.cpp in Sources */,
-				73948AFA2775C64600C889E4 /* ResourcePath.mm in Sources */,
 				737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */,
 				73235F10278238690021EEF4 /* Beep.cpp in Sources */,
 				73BB77252778E1150083724F /* RenderVectorLines.cpp in Sources */,

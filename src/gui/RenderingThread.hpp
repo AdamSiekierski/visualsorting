@@ -13,7 +13,6 @@
 #include <SFML/Graphics.hpp>
 #include <thread>
 
-#include "ResourcePath.hpp"
 #include "GUI.hpp"
 #include "Utils.hpp"
 #include "Algorithms.hpp"
