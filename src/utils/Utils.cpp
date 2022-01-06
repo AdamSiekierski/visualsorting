@@ -10,13 +10,13 @@
 
 std::vector<int> Utils::random_vector(int len, int min, int max) {
     std::vector<int> vector;
-    
+
     srand(time(NULL));
-    
+
     for (int i = 0; i < len; i++) {
         vector.push_back(Utils::random_number(min, max));
     }
-    
+
     return vector;
 }
 

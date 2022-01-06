@@ -42,17 +42,16 @@ namespace HeapSort {
 }
 
 std::vector<int> Algorithms::heap_sort(std::vector<int> vec, Algorithms::StepCallback step) {
-   HeapSort::initial_heap(vec, step);
+    HeapSort::initial_heap(vec, step);
 
-   int size = vec.size();
+    int size = vec.size();
 
-   for (int i = vec.size() - 1; i > 0; i--) {
+    for (int i = vec.size() - 1; i > 0; i--) {
         step(&vec, 0);
        
         std::swap(vec[0], vec[i]);
        
         step(&vec, i);
-       
         size--;
         HeapSort::heap(vec, 0, size, step);
     }

@@ -11,6 +11,7 @@
 		733C131F2777694E00FB3FFF /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C131D2777694E00FB3FFF /* GUI.cpp */; };
 		733C132227776C4300FB3FFF /* RenderingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C132027776C4300FB3FFF /* RenderingThread.cpp */; };
 		733C132527776DAA00FB3FFF /* EventLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733C132327776DAA00FB3FFF /* EventLoop.cpp */; };
+		7344E05E2787A06700EA83C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7344E05D2787A06700EA83C2 /* Images.xcassets */; };
 		737E241F277601AA002DA3A0 /* Algorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E241D277601AA002DA3A0 /* Algorithms.cpp */; };
 		737E24222776826B002DA3A0 /* HeapSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E24202776826B002DA3A0 /* HeapSort.cpp */; };
 		737E242527768607002DA3A0 /* InsertionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737E242327768607002DA3A0 /* InsertionSort.cpp */; };
@@ -32,6 +33,7 @@
 		733C132127776C4300FB3FFF /* RenderingThread.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RenderingThread.hpp; sourceTree = "<group>"; };
 		733C132327776DAA00FB3FFF /* EventLoop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EventLoop.cpp; sourceTree = "<group>"; };
 		733C132427776DAA00FB3FFF /* EventLoop.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EventLoop.hpp; sourceTree = "<group>"; };
+		7344E05D2787A06700EA83C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = VisualSorting/Images.xcassets; sourceTree = "<group>"; };
 		737E241D277601AA002DA3A0 /* Algorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithms.cpp; sourceTree = "<group>"; };
 		737E241E277601AA002DA3A0 /* Algorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algorithms.hpp; sourceTree = "<group>"; };
 		737E24202776826B002DA3A0 /* HeapSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeapSort.cpp; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				73948B0F2775D20500C889E4 /* .gitignore */,
 				73948AF82775C64600C889E4 /* VisualSorting-Info.plist */,
 				73948B0D2775CBA200C889E4 /* src */,
+				7344E05D2787A06700EA83C2 /* Images.xcassets */,
 			);
 			name = VisualSorting;
 			sourceTree = SOURCE_ROOT;
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7344E05E2787A06700EA83C2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +353,12 @@
 		73948B0A2775C64600C889E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VisualSorting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,10 +366,13 @@
 		73948B0B2775C64600C889E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VisualSorting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
