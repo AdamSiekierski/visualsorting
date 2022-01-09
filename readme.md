@@ -4,4 +4,6 @@
 
 - C++
 - SFML
-- Projekt napisany jest w Xcode (w planach dodanie cmake)
+- IDE, Projekt - XCode (macOS) - aplikacja wymagałaby kilku dostosowań by możliwe było skompilowanie na komputerze z systemem Windows
+
+
