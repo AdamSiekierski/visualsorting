@@ -10,13 +10,13 @@
 
 std::vector<int> Algorithms::insertion_sort(std::vector<int> vec, Algorithms::StepCallback step) {
     for (int j = 1; j < vec.size(); j++) {
-        step(&vec, j);
+        step(&vec, j, 1, 1);
         
         int k = vec[j];
         int i = j - 1;
 
         while (i >= 0 && vec[i] > k) {
-            step(&vec, i);
+            step(&vec, i, 1, 1);
             
             vec[i + 1] = vec[i];
 

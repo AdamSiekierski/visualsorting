@@ -15,6 +15,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "ResourcePath.hpp"
+
 namespace Utils {
     std::vector<int> random_vector(int len, int min, int max);
 

@@ -16,5 +16,6 @@
 #include "AlgorithmSelect.hpp"
 #include "RenderVectorLines.hpp"
 #include "Beep.hpp"
+#include "InfoBar.hpp"
 
 #endif /* GUI_hpp */

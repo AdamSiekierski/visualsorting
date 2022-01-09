@@ -15,6 +15,16 @@ void short_beep(sf::Sound* sound) {
     sound->stop();
 }
 
+void frame(sf::RenderWindow* window, std::function<void()> func) {
+    if (window != NULL) {
+        window->clear(sf::Color::White);
+        
+        func();
+        
+        window->display();
+    }
+}
+
 void GUI::rendering_thread(GUI::RenderingThreadParams p) {
     sf::RenderWindow* window = p.window;
 
@@ -22,12 +32,24 @@ void GUI::rendering_thread(GUI::RenderingThreadParams p) {
 
     sf::SoundBuffer beepBuffer;
     sf::Sound beepSound;
-
     GUI::create_beep(&beepBuffer, &beepSound);
+    
+    sf::Font arial;
+    if (!arial.loadFromFile(Utils::resourcePath() + "arial.ttf")) {
+        std::cout << "Could not load font arial\n";
+    }
+    
+    int reads = 0;
+    int writes = 0;
 
-    std::vector<int> sorted = Algorithms::sort_with(p.alg, &p.vec, [&](std::vector<int>* vec, int curr) {
-        GUI::render_vector_lines(vec, window, curr);
-        window->display();
+    std::vector<int> sorted = Algorithms::sort_with(p.alg, &p.vec, [&](std::vector<int>* vec, int curr, int newReads, int newWrites) {
+        reads += newReads;
+        writes += newWrites;
+        
+        frame(window, [&]() {
+            GUI::render_info_bar(window, &arial, p.alg, reads, writes);
+            GUI::render_vector_lines(vec, window, curr);
+        });
 
         beepSound.setPitch(GUI::get_beep_pitch((*vec)[curr]));
 
@@ -35,8 +57,10 @@ void GUI::rendering_thread(GUI::RenderingThreadParams p) {
     });
 
     for (int i = 0; i < sorted.size(); i++) {
-        GUI::render_vector_lines(&sorted, window, i);
-        window->display();
+        frame(window, [&]() {
+            GUI::render_info_bar(window, &arial, p.alg, reads, writes);
+            GUI::render_vector_lines(&sorted, window, i);
+        });
 
         beepSound.setPitch(GUI::get_beep_pitch(sorted[i]));
 
@@ -46,8 +70,10 @@ void GUI::rendering_thread(GUI::RenderingThreadParams p) {
     beepSound.stop();
     beepSound.setPitch(1);
 
-    GUI::render_vector_lines(&sorted, window);
-    window->display();
+    frame(window, [&]() {
+        GUI::render_info_bar(window, &arial, p.alg, reads, writes);
+        GUI::render_vector_lines(&sorted, window);
+    });
 
     short_beep(&beepSound);
     short_beep(&beepSound);

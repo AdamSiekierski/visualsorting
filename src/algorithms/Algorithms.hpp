@@ -10,6 +10,7 @@
 #define Algorithms_hpp
 
 #include <stdio.h>
+#include <string>
 #include <vector>
 #include "constants.hpp"
 
@@ -27,11 +28,14 @@ namespace Algorithms {
         NONE,
     } Algorithm;
 
-    typedef std::function<void(std::vector<int>*, int)> StepCallback;
+    // Vector, current index, new reads, new writes
+    typedef std::function<void(std::vector<int>*, int, int, int)> StepCallback;
 
     std::vector<int> sort_with(Algorithms::Algorithm a, std::vector<int>* vec, Algorithms::StepCallback step);
 
     int sleep_for_algorithm(Algorithms::Algorithm a);
+
+    std::string name_for_algorithm(Algorithms::Algorithm a);
 }
 
 #endif /* Algorithms_hpp */

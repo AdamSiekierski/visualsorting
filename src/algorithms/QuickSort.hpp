@@ -15,7 +15,7 @@
 #include "Algorithms.hpp"
 
 namespace Algorithms {
-    std::vector<int> quick_sort(std::vector<int> vec, std::function<void(std::vector<int>*, int)> step);
+    std::vector<int> quick_sort(std::vector<int> vec, std::function<void(std::vector<int>*, int, int, int)> step);
 }
 
 #endif /* QuickSort_hpp */

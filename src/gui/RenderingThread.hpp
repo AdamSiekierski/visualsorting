@@ -16,6 +16,7 @@
 #include "GUI.hpp"
 #include "Utils.hpp"
 #include "Algorithms.hpp"
+#include "Utils.hpp"
 
 namespace GUI {
     struct RenderingThreadParams {

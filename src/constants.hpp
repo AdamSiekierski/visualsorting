@@ -9,9 +9,9 @@
 #ifndef constants_h
 #define constants_h
 
-#define WINDOW_H 1000
-#define WINDOW_W 1200
-#define VECTOR_LEN 200
-#define LINE_PADDING 10
+#define WINDOW_H 1050.f
+#define WINDOW_W 1200.f
+#define VECTOR_LEN 200.f
+#define VECTOR_MAX 1000.f
 
 #endif /* constants_h */

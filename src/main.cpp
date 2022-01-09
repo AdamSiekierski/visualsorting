@@ -19,7 +19,7 @@
 int main(int, char const**) {
     Algorithms::Algorithm alg = GUI::select_alogrithm();
     
-    std::vector<int> vec = Utils::random_vector(VECTOR_LEN, 1, WINDOW_H);
+    std::vector<int> vec = Utils::random_vector(VECTOR_LEN, 1, VECTOR_MAX);
 
     sf::RenderWindow window(sf::VideoMode(WINDOW_W, WINDOW_H), "VisualSorting");
 
