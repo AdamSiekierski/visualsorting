@@ -12,8 +12,8 @@ sf::RectangleShape create_line(int posY, int posX, int h, int w, bool isCurr) {
     sf::RectangleShape rect(sf::Vector2f(w, h));
     
     rect.move(posX * w, posY);
-    rect.setFillColor(isCurr ? sf::Color::Red : sf::Color::Black);
-    
+    rect.setFillColor(isCurr ? sf::Color::Red : sf::Color::White);
+
     return rect;
 }
 
@@ -21,7 +21,7 @@ void GUI::render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window, i
     sf::Vector2<unsigned int> windowSize = window->getSize();
     
     for (int i = 0; i < vec->size(); i++) {
-        sf::RectangleShape line = create_line(WINDOW_H - VECTOR_MAX, i, vec->at(i), windowSize.x / vec->size(), i == curr);
+        sf::RectangleShape line = create_line(WINDOW_H - vec->at(i), i, vec->at(i), windowSize.x / vec->size(), i == curr);
         window->draw(line);
     }
 }
@@ -30,7 +30,7 @@ void GUI::render_vector_lines(std::vector<int>* vec, sf::RenderWindow* window) {
     sf::Vector2<unsigned int> windowSize = window->getSize();
     
     for (int i = 0; i < vec->size(); i++) {
-        sf::RectangleShape line = create_line(WINDOW_H - VECTOR_MAX, i, vec->at(i), windowSize.x / vec->size(), false);
+        sf::RectangleShape line = create_line(WINDOW_H - vec->at(i), i, vec->at(i), windowSize.x / vec->size(), false);
         window->draw(line);
     }
 }

@@ -30,5 +30,5 @@ void GUI::create_beep(sf::SoundBuffer* buffer, sf::Sound* sound) {
 }
 
 float GUI::get_beep_pitch(int val) {
-    return 0.75 - (val / 4000.0);
+    return 0.55 + (val / 4000.0);
 }

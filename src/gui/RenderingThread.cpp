@@ -17,7 +17,7 @@ void short_beep(sf::Sound* sound) {
 
 void frame(sf::RenderWindow* window, std::function<void()> func) {
     if (window != NULL) {
-        window->clear(sf::Color::White);
+        window->clear(sf::Color::Black);
         
         func();
         

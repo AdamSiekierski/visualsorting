@@ -9,7 +9,7 @@
 #include "HeapSort.hpp"
 
 namespace HeapSort {
-    void heap(std::vector<int>& vec, int i, int size, Algorithms::StepCallback step) {
+    void heapify(std::vector<int>& vec, int i, int size, Algorithms::StepCallback step) {
         int largest;
         int l = (2 * i) + 1;
         int r = l + 1;
@@ -28,21 +28,21 @@ namespace HeapSort {
 
         if (largest != i) {
             std::swap(vec[i], vec[largest]);
-            heap(vec, largest, size, step);
+            heapify(vec, largest, size, step);
         }
         
         step(&vec, largest, 4, 1);
     }
 
-    void initial_heap(std::vector<int>& vec, Algorithms::StepCallback step) {
+    void initial_heapify(std::vector<int>& vec, Algorithms::StepCallback step) {
         for (int i = (vec.size() / 2); i >= 0; i--) {
-            heap(vec, i, vec.size(), step);
+            heapify(vec, i, vec.size(), step);
         }
     }
 }
 
 std::vector<int> Algorithms::heap_sort(std::vector<int> vec, Algorithms::StepCallback step) {
-    HeapSort::initial_heap(vec, step);
+    HeapSort::initial_heapify(vec, step);
 
     int size = vec.size();
 
@@ -53,7 +53,7 @@ std::vector<int> Algorithms::heap_sort(std::vector<int> vec, Algorithms::StepCal
        
         step(&vec, i, 0, 1);
         size--;
-        HeapSort::heap(vec, 0, size, step);
+        HeapSort::heapify(vec, 0, size, step);
     }
 
     return vec;
